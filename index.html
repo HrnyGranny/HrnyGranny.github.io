@@ -1,12 +1,60 @@
- <!DOCTYPE html>
-<HTML>
-  <head>
-    <title>Mi primer WEB</title>
-  </head>
-  <body>
-    <div id="una capa">
-      <h1>Hola mundo!</h1>
-      <p>Este es un ejemplo del uso de HTML para crear un documento web que nuestro navegador es capaz de interpretar.</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Álvaro Ruiz Roldán</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#Formación">Formación</a></li>
+        <li><a href="#Habilidades">Habilidades</a></li>
+        <li><a href="#Portafolio">Portafolio</a></li>
+      </ul>
+      <div class="contact-icons">
+        <a href="mailto:Alvaro.Ruiz12@alu.uclm.es"><img src="img/correo-electronico.png" alt="Correo"></a> <!-- Correo -->
+        <a href="tel:627-029-762"><img src="img/llamada-telefonica.png" alt="Teléfono"></a> <!-- Teléfono -->
+        <a href="https://linktr.ee/alvaro_r.r"><img src="img/enlace.png" alt="Teléfono"></a> <!-- LinkTree -->
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="Home" class="home-section">
+      <h2>Home Section</h2>
+      <!-- Contenido de la sección Home -->
+    </section>
+
+    <section id="Formación" class="formacion-section">
+      <h2>Formacion</h2>
+      <!-- Contenido de la sección Home -->
+    </section>
+
+    <section id="Habilidades" class="habilidades-section">
+      <h2>Habilidades</h2>
+      <!-- Contenido de la sección Data -->
+    </section>
+
+    <section id="Portafolio" class="portafolio-section">
+      <h2>Portafolio</h2>
+      <!-- Contenido de la sección Home -->
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="contact-info">
+      <h3>Datos de contacto</h3>
+      <p>Tu dirección de correo electrónico</p>
+      <p>Tu número de teléfono</p>
+      <p>Otras formas de contacto</p>
     </div>
-  </body>  
-</HTML>
+  </footer>
+
+  <script src="js/TopDownBar.js"></script>
+</body>
+</html>
