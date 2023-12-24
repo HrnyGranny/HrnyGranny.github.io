@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#contact_').submit(function (e) {
+    $('#contact').submit(function (e) {
         e.preventDefault();
 
         var nombre = $('#name').val();
