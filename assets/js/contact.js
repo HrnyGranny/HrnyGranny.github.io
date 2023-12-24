@@ -11,26 +11,8 @@ $(document).ready(function () {
         if (!validarCampos(nombre, correo, asunto, mensaje)) {
             return;
         }else{
-            // Acción POST para enviar el correo electrónico
-          $.ajax({
-            type: 'POST',
-            url: 'https://formsubmit.co/alvaroruizroldan@gmail.com',
-            data: {
-              name: nombre,
-              email: correo,
-              subject: asunto,
-              message: mensaje
-            },
-            success: function (response) {
-              // Acciones después de enviar el correo exitosamente
-              alert('¡Correo enviado!');
-              // Puedes realizar otras acciones, redireccionar, etc.
-            },
-            error: function (error) {
-              // Manejo de errores si la solicitud falla
-              alert('Error al enviar el correo.');
-            }
-          });
+            alert('¡Correo enviado!');
+            this.submit();
         }
 
         // Función de validación para los campos del formulario
