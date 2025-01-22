@@ -322,7 +322,8 @@ html {
 
 /* Buttons */
 
-.white-button a {
+.white-button a,
+.white-button button {
     display: inline-block;
     padding: 12px 20px;
     background-color: #fff;
@@ -332,9 +333,13 @@ html {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     transition: all 0.5s;
+    border: none; /* Añadido para los botones */
+    outline: none; /* Añadido para los botones */
+    cursor: pointer; /* Añadido para los botones */
 }
 
-.white-button a:hover {
+.white-button a:hover,
+.white-button button:hover {
     background-color: #a43f49;
     color: #fff;
 }
