@@ -10,8 +10,15 @@ $(document).ready(function () {
         // Función de validación
         if (!validarCampos(nombre, correo, asunto, mensaje)) {
             return;
-        }else{
-            alert('¡Correo enviado!');
+        } else {
+            Swal.fire({
+                position: 'bottom-end',
+                icon: 'success',
+                title: '¡Correo enviado!',
+                showConfirmButton: false,
+                timer: 1500,
+                toast: true
+            });
             this.submit();
         }
 
@@ -19,22 +26,45 @@ $(document).ready(function () {
         function validarCampos(nombre, correo, asunto, mensaje) {
             // Validar campos vacíos
             if (nombre === '' || correo === '' || asunto === '' || mensaje === '') {
-                alert('Por favor, completa todos los campos.');
+                Swal.fire({
+                    position: 'bottom-end',
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Por favor, completa todos los campos.',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    toast: true
+                });
                 return false;
             }
 
             // Validar correo electrónico
             if (!validarCorreo(correo)) {
-                alert('Por favor, ingresa un correo electrónico válido');
+                Swal.fire({
+                    position: 'bottom-end',
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Por favor, ingresa un correo electrónico válido.',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    toast: true
+                });
                 return false;
             }
+
             // Validar nombre y mensaje (permitir solo espacios cuando se ingrese texto)
             if (nombre.trim() === '' || mensaje.trim() === '' || asunto.trim() === '') {
-                alert('Los campos no pueden tener espacios antes de ingresar el texto.');
+                Swal.fire({
+                    position: 'bottom-end',
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Los campos no pueden tener espacios antes de ingresar el texto.',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    toast: true
+                });
                 return false;
             }
-
-
 
             return true;
         }
